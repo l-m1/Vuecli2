@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 创建函数三种方式
+        const sum = function(num1,num2) {
+            return num1 + num2
+        }
+        const obj = {
+            aaa() {
+
+            }
+        }
+        const cc = () => {
+            return
+        } */
+        //箭头函数放入两个参数
+        const sum = (num1,num2) => {
+            return num1 + num2
+        }
+        console.log(sum(20,30));
+
+        //传入一个参数
+        const demo = (h) => {
+            return h
+        }
+        console.log(demo(10));
+        //传入一个参数 简化
+        const demo1 = h1 => {
+            return h1
+        }
+        console.log(demo1(30));
+        //传入一个参数 再简化
+        const demo2 = h => h
+        console.log(demo2(40));
+
+        //返回值 多个输出按照原本输出即可
+        const power = (num1,num2) => {
+            console.log(num1 * num2);
+            console.log(num1);
+            console.log(num2);
+        }
+        power(30,40);
+
+        //若只有一行代码需要输出 则可写简便写法
+        const aa = h => console.log("hello");
+        aa();
+    </script>
+</body>
+</html>

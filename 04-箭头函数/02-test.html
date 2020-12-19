@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fullname = 'a';
+        var obj = {
+            fullname: 'b',
+            prop: {
+                fullname: 'c',
+                getFullname: () => {
+                    return this.fullname;
+                },
+                getName: function() {
+                    return this.fullname;
+                }
+            }
+        };
+        console.log(obj.prop.getFullname());
+        var test = obj.prop.getFullname;
+        console.log(test());
+        
+        console.log(obj.prop.getName());
+        var test = obj.prop.getName();
+        console.log(test);
+
+        var test = obj.prop.getName;
+        console.log(test());
+    </script>
+</body>
+</html>
